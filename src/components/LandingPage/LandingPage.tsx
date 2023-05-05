@@ -24,7 +24,7 @@ const LandingPage: React.FC<Props> = ({ homeRef, aboutRef, experienceRef, projec
             <Navbar homeRef={homeRef} aboutRef={aboutRef} experienceRef={experienceRef} projectsRef={projectsRef} contactRef={contactRef} />
 
             <div className={styles['text-box']}>
-                <h2>Hello World...</h2>
+                <h2>Hello World,</h2>
                 <h1>I'm Youssef Kawook</h1>
                 <h2>A Full Stack Developer currently based in Leeds, UK. </h2>
             </div>
