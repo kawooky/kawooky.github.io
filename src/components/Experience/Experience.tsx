@@ -22,7 +22,8 @@ const Experience: React.FC<Props> = ({ experienceRef }) => {
             </div>
             <div className={styles['experience-body']}>
 
-                <div className={styles.timeline}>
+
+                <div className={styles['timeline-and-buttons-container']}>
                     <Timeline />
                 </div>
 

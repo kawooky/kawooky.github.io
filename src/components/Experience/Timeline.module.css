@@ -1,0 +1,13 @@
+.button-container {
+
+}
+
+.buttons {
+    
+}
+
+.timeline-container {
+    width: 50vw;
+    height: 70vh;
+    overflow: auto;
+}
