@@ -2,9 +2,24 @@ import React, { useState } from 'react'
 import styles from './Timeline.module.css'
 import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faBriefcase } from '@fortawesome/free-solid-svg-icons'
+import { faHandshakeAngle } from '@fortawesome/free-solid-svg-icons'
+import { faUserGraduate } from '@fortawesome/free-solid-svg-icons'
+import { faChalkboardUser } from '@fortawesome/free-solid-svg-icons'
+import { expArr } from './expObj';
 
-export const Timeline = () => {
+interface Props {
+    infoIndex: number;
+    setInfoIndex: React.Dispatch<React.SetStateAction<number>>;
+}
+
+export const Timeline : React.FC<Props> = ({infoIndex, setInfoIndex}) => {
     const [type, setType] = useState('All');
+
+
+
+
 
 
 
@@ -12,125 +27,123 @@ export const Timeline = () => {
     return (
         <div>
             <div className={styles['button-container']}>
-                <button className={styles.buttons} onClick={() => {
+                <button className={styles['left-button']} style={{backgroundColor: type==='All'? '#ff0000' : 'transparent'}} onClick={() => {
                     setType('All')
                 }}>
                     All
                 </button>
-                <button className={styles.buttons} onClick={() => {
+                <button className={styles.buttons} style={{backgroundColor: type==='Work'? '#ff0000' : 'transparent'}} onClick={() => {
                     setType('Work')
                 }}>
                     Work
                 </button>
-                <button className={styles.buttons} onClick={() => {
+                <button className={styles.buttons} style={{backgroundColor: type==='Education'? '#ff0000' : 'transparent'}} onClick={() => {
                     setType('Education')
                 }}>
                     Education
                 </button>
-                <button className={styles.buttons} onClick={() => {
+                <button className={styles.buttons} style={{backgroundColor: type==='Volunteering'? '#ff0000' : 'transparent'}} onClick={() => {
                     setType('Volunteering')
                 }}>
                     Volunteering
                 </button>
-                <button className={styles.buttons} onClick={() => {
+                <button className={styles['right-button']} style={{backgroundColor: type==='Placements'? '#ff0000' : 'transparent'}} onClick={() => {
                     setType('Placements')
                 }}>
                     Placements
                 </button>
             </div>
-            <p>{type}</p>
-            <div className={styles['timeline-container']}>
+            <div className={styles['timeline-container']} >
                 <VerticalTimeline>
-                    <VerticalTimelineElement
-                        className="vertical-timeline-element--work"
-                        position={'right'}
-                        date="June 2022 - August 2022"
-                        iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
-                        onTimelineElementClick={() => {
-                        }}
-                    // icon={<WorkIcon />}
-                    >
-                        <h3 className="vertical-timeline-element-title">Summer Camp Counsellor, Windsor Mountain International</h3>
-                        <h4 className="vertical-timeline-element-subtitle">New Hampshire, USA</h4>
-                    </VerticalTimelineElement>
-                    <VerticalTimelineElement
-                        className="vertical-timeline-element--work"
-                        position={'right'}
-                        date="March 2022 - May 2022"
-                        iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
-                    // icon={<WorkIcon />}
-                    >
-                        <h3 className="vertical-timeline-element-title">Customer Accounts Admin, Pure Retirement</h3>
-                        <h4 className="vertical-timeline-element-subtitle">Leeds, UK</h4>
-                        <p>
-                            explanation
-                        </p>
-                    </VerticalTimelineElement>
-                    <VerticalTimelineElement
-                        className="vertical-timeline-element--work"
-                        position={'right'}
-                        date="October 2021 - January 2022"
-                        iconStyle={{ background: 'rgb(33, 10, 243)', color: '#fff' }}
-                    // icon={<WorkIcon />}
-                    >
-                        <h3 className="vertical-timeline-element-title">Help Desk Operator, Sodexo.</h3>
-                        <h4 className="vertical-timeline-element-subtitle">Leeds, UK</h4>
-                        <p>
-                            User Experience, Visual Design
-                        </p>
-                    </VerticalTimelineElement>
-                    <VerticalTimelineElement
-                        className="vertical-timeline-element--work"
-                        position={'right'}
-                        date="June 2020 - November 2020"
-                        iconStyle={{ background: 'rgb(33, 10, 243)', color: '#fff' }}
-                    // icon={<WorkIcon />}
-                    >
-                        <h3 className="vertical-timeline-element-title">Online Assistant, Sainsburys</h3>
-                        <h4 className="vertical-timeline-element-subtitle">Leeds, UK</h4>
-                        <p>
-                            User Experience, Visual Design
-                        </p>
-                    </VerticalTimelineElement>
-                    <VerticalTimelineElement
-                        className="vertical-timeline-element--work"
-                        position={'right'}
-                        date="December 2016 – October 2022"
-                        iconStyle={{ background: 'rgb(33, 10, 243)', color: '#fff' }}
-                    // icon={<WorkIcon />}
-                    >
-                        <h3 className="vertical-timeline-element-title">Food Courier, Deliveroo</h3>
-                        <h4 className="vertical-timeline-element-subtitle">Leeds, UK</h4>
-                        <p>
-                            User Experience, Visual Design
-                        </p>
-                    </VerticalTimelineElement>
-                    <VerticalTimelineElement
-                        className="vertical-timeline-element--work"
-                        position={'right'}
-                        date="February 2018 – April 2018"
-                        iconStyle={{ background: 'rgb(33, 10, 243)', color: '#fff' }}
-                    // icon={<WorkIcon />}
-                    >
-                        <h3 className="vertical-timeline-element-title">Business Advisor, ICS (Balloon ventures)</h3>
-                        <h4 className="vertical-timeline-element-subtitle">Mbale, Uganda</h4>
-                        <p>
-                            User Experience, Visual Design
-                        </p>
-                    </VerticalTimelineElement>
-                    <VerticalTimelineElement
-                        className="vertical-timeline-element--work"
-                        position={'right'}
-                        date="September 2015 – March 2017"
-                        iconStyle={{ background: 'rgb(33, 10, 243)', color: '#fff' }}
-                    // icon={<WorkIcon />}
-                    >
-                        <h3 className="vertical-timeline-element-title">Feeding the Homeless, Feed Leeds</h3>
-                        <h4 className="vertical-timeline-element-subtitle">Leeds, UK</h4>
-                        <p>
-                            User Experience, Visual Design
-                        </p>
-                    </VerticalTimelineElement>
+                    {expArr.map((exp, index) => {
+                        if (exp.type === 'Work') {
+                            return (
+                                (type === 'All' || type === 'Work') &&
+                                <VerticalTimelineElement
+                                    className={styles["vertical-timeline-element--work"]}
+                                    position={'right'}
+                                    contentStyle={
+                                        { background: 'rgb(33, 150, 243)', color: '#fff' }
+                                    }
+                                    date={exp.date}
+                                    iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
+                                    onTimelineElementClick={() => {
+                                        setInfoIndex(index)
+                                    }}
+                                icon={<FontAwesomeIcon icon={faBriefcase} />}
+                                >
+                                    <h3 className="vertical-timeline-element-title">{exp.title}, {exp.company}</h3>
+                                    <h4 className="vertical-timeline-element-subtitle">{exp.location}</h4>
+                                </VerticalTimelineElement>
+                            )
+                        }
+
+                            if (exp.type === 'Education') {
+                                return (
+                                    (type === 'All' || type === 'Education') &&
+                                    <VerticalTimelineElement
+                                        className={styles["vertical-timeline-element--work"]}
+                                        position={'right'}
+                                        contentStyle={
+                                            { background: 'rgb(33, 150, 0)', color: '#fff' }
+                                        }
+                                        date={exp.date}
+                                        iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
+                                        onTimelineElementClick={() => {
+                                            setInfoIndex(index)
+                                        }}
+                                    icon={<FontAwesomeIcon icon={faUserGraduate} />}
+                                    >
+                                        <h3 className="vertical-timeline-element-title">{exp.title}, {exp.company}</h3>
+                                        <h4 className="vertical-timeline-element-subtitle">{exp.location}</h4>
+                                    </VerticalTimelineElement>
+                                )
+                            }
+
+                        if (exp.type === 'Volunteering') {
+                            return (
+                                (type === 'All' || type === 'Volunteering') &&
+                                <VerticalTimelineElement
+                                    className={styles["vertical-timeline-element--work"]}
+                                    position={'right'}
+                                    contentStyle={
+                                        { background: 'rgb(0, 0, 243)', color: '#fff' }
+                                    }
+                                    date={exp.date}
+                                    iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
+                                    onTimelineElementClick={() => {
+                                        setInfoIndex(index)
+                                    }}
+                                icon={<FontAwesomeIcon icon={faHandshakeAngle} />}
+                                >
+                                    <h3 className="vertical-timeline-element-title">{exp.title}, {exp.company}</h3>
+                                    <h4 className="vertical-timeline-element-subtitle">{exp.location}</h4>
+                                </VerticalTimelineElement>
+                            )
+                        }
+
+                        if (exp.type === 'Placements') {
+                            return (
+                                (type === 'All' || type === 'Placements') &&
+                                <VerticalTimelineElement
+                                    className={styles["vertical-timeline-element--work"]}
+                                    position={'right'}
+                                    contentStyle={
+                                        { background: 'rgb(0, 0, 243)', color: '#fff' }
+                                    }
+                                    date={exp.date}
+                                    iconStyle={{ background: 'rgb(33, 150, 20)', color: '#fff' }}
+                                    onTimelineElementClick={() => {
+                                        setInfoIndex(index)
+                                    }}
+                                icon={<FontAwesomeIcon icon={faChalkboardUser} />}
+                                >
+                                    <h3 className="vertical-timeline-element-title">{exp.title}, {exp.company}</h3>
+                                    <h4 className="vertical-timeline-element-subtitle">{exp.location}</h4>
+                                </VerticalTimelineElement>
+                            )
+                        }
+                    })}
                 </VerticalTimeline>
             </div>
 

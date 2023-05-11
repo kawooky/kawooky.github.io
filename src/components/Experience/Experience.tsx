@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react'
 import styles from './Experience.module.css'
 import { Timeline } from './Timeline';
+import { expArr } from './expObj';
 
 
 
@@ -13,6 +14,7 @@ interface Props {
 
 const Experience: React.FC<Props> = ({ experienceRef }) => {
 
+    const [infoIndex, setInfoIndex] = useState(0)
 
 
     return (
@@ -24,7 +26,7 @@ const Experience: React.FC<Props> = ({ experienceRef }) => {
 
 
                 <div className={styles['timeline-and-buttons-container']}>
-                    <Timeline />
+                    <Timeline infoIndex={infoIndex} setInfoIndex={setInfoIndex}/>
                 </div>
 
 
@@ -36,7 +38,12 @@ const Experience: React.FC<Props> = ({ experienceRef }) => {
 
 
                 <div className={styles.info}>
-                    <h2>Work</h2>
+                    <h2>{expArr[infoIndex].title}</h2>
+                    <h2>{expArr[infoIndex].company}</h2>
+                    <h3>{expArr[infoIndex].location}</h3>
+                    <h4>{expArr[infoIndex].date}</h4>
+                    <p>{expArr[infoIndex].description}</p>
+                    {/* <h2>Work</h2>
                     <ol>
                         <li>
                             Summer Camp Counsellor, Windsor Mountain International. New Hampshire USA (June 2022 – August 2022)
@@ -63,7 +70,7 @@ const Experience: React.FC<Props> = ({ experienceRef }) => {
                         <li>
                             Feeding the Homeless, Feed Leeds. Leeds (September 2015 – March 2017)
                         </li>
-                    </ol>
+                    </ol> */}
                 </div>
             </div>
         </div>

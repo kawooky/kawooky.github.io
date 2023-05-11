@@ -1,13 +1,56 @@
 .button-container {
-
+    display: flex;
+    justify-content: center;
+    gap: 0px;
+    border-top-left-radius: 30px;
+    /* background-color: antiquewhite; */
+    border-top-right-radius: 30px;
 }
 
 .buttons {
-    
+    background-color: transparent;
+    font-size:x-large;
+    width: 10vw;
+    height:50px; 
+    color: aliceblue;
+    border-color: azure;
+    border: 2px solid #6191c4;
+    /* border: none; */
+}
+
+.left-button{
+    background-color: transparent;
+    font-size:x-large;
+    width: 10vw;
+    color: aliceblue;
+    border-top-left-radius: 30px;
+    border: 2px solid #6191c4;
+}
+
+.right-button{
+    background-color: transparent;
+    font-size:x-large;
+    width: 10vw;
+    color: aliceblue;
+    border-top-right-radius: 30px;
+    border: 2px solid #6191c4;
 }
 
 .timeline-container {
-    width: 50vw;
-    height: 70vh;
+    align-items:end;
+    padding-top: 20px;
+    width: 40vw;
+    height: 76vh;
     overflow: auto;
+    border-bottom-right-radius: 30px;
+    /* background-color: beige; */
+}
+
+.vertical-timeline-element--work {
+ 
+    /* background-color: brown; */
+}
+
+.test {
+    background-color: rgb(31, 4, 202);
 }
