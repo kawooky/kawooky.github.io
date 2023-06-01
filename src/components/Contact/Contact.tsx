@@ -6,7 +6,7 @@ import styles from './Contact.module.css'
 interface Props {
     homeRef: React.RefObject<HTMLDivElement>;
     contactRef: React.RefObject<HTMLDivElement>;
-  }
+}
 
 const Contact: React.FC<Props> = ({ homeRef, contactRef }) => {
 
@@ -14,8 +14,14 @@ const Contact: React.FC<Props> = ({ homeRef, contactRef }) => {
 
     return (
         <div ref={contactRef} className={styles.contact}>
-            <h1>Contact</h1>
-            <form>
+            <div className={styles['contact-header']}>
+                <h1>Contact</h1>
+
+            </div>
+            <div className={styles['contact-body']}>
+
+
+            <form className={styles.form}>
                 <label>
                     Name:
                     <input type='text' name='name' />
@@ -28,11 +34,14 @@ const Contact: React.FC<Props> = ({ homeRef, contactRef }) => {
                     Message:
                     <input type='text' name='message' />
                 </label>
-                <input type='submit' value='CoNtACT mE'></input>
+                <input type='submit' value='Send Message'></input>
             </form>
-            <button onClick={() => homeRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' })}>
-            Back to the top
+
+            <button className={styles['top-button']} onClick={() => homeRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' })}>
+                Back to the top
             </button>
+
+            </div>
         </div>
     )
 }

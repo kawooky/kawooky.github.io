@@ -1,5 +1,10 @@
 import React from 'react';
 import styles from './Projects.module.css'
+import { SingleProject } from './SingleProject';
+import {projectsInfoObject} from './projectsInfoObject'
+import image from './social-lift-picture.png'
+
+
 
 
 
@@ -13,26 +18,19 @@ const Projects: React.FC<Props> = ({ projectsRef }) => {
 
     return (
         <div ref={projectsRef} className={styles.projects}>
+            <div className={styles['projects-header']}>
+
             <h1>Projects</h1>
-
-            <div>
-            <h2>Social News platform</h2>
-            <h3>Languages: Express, SQL, Javascript, React</h3>
             </div>
 
-            <div>
-            <h2>Social Gym Mobile Application</h2>
-            <h3>Languages: Firebase, Javascript, React Native, Socket.io</h3>
-            </div>
+            <div className={styles['projects-body']}>
 
-            <div>
-            <h2>Pokemon Fighter (OOP)</h2>
-            <h3>Languages: Javascript, Node?, What i used to run it</h3>
-            </div>
+            <SingleProject projectsInfoObject={projectsInfoObject.socialLift}/>
+            <SingleProject projectsInfoObject={projectsInfoObject.ncNews}/>
+            <SingleProject projectsInfoObject={projectsInfoObject.personalWebsite}/>
+            
 
-            <div>
-            <h2>Project in mathematics dissertation</h2>
-            <h3>Languages: Python</h3>
+
             </div>
         </div>
     )

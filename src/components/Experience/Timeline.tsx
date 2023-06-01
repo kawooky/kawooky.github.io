@@ -59,7 +59,8 @@ export const Timeline : React.FC<Props> = ({infoIndex, setInfoIndex}) => {
                         if (exp.type === 'Work') {
                             return (
                                 (type === 'All' || type === 'Work') &&
-                                <VerticalTimelineElement
+                                <VerticalTimelineElement 
+                                    key={index}
                                     className={styles["vertical-timeline-element--work"]}
                                     position={'right'}
                                     contentStyle={
@@ -82,6 +83,7 @@ export const Timeline : React.FC<Props> = ({infoIndex, setInfoIndex}) => {
                                 return (
                                     (type === 'All' || type === 'Education') &&
                                     <VerticalTimelineElement
+                                    key={index}
                                         className={styles["vertical-timeline-element--work"]}
                                         position={'right'}
                                         contentStyle={
@@ -104,6 +106,7 @@ export const Timeline : React.FC<Props> = ({infoIndex, setInfoIndex}) => {
                             return (
                                 (type === 'All' || type === 'Volunteering') &&
                                 <VerticalTimelineElement
+                                key={index}
                                     className={styles["vertical-timeline-element--work"]}
                                     position={'right'}
                                     contentStyle={
@@ -126,6 +129,7 @@ export const Timeline : React.FC<Props> = ({infoIndex, setInfoIndex}) => {
                             return (
                                 (type === 'All' || type === 'Placements') &&
                                 <VerticalTimelineElement
+                                key={index}
                                     className={styles["vertical-timeline-element--work"]}
                                     position={'right'}
                                     contentStyle={
