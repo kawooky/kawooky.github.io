@@ -37,12 +37,15 @@ const Experience: React.FC<Props> = ({ experienceRef }) => {
 
 
 
-                <div className={styles.info}>
-                    <h2>{expArr[infoIndex].title}</h2>
-                    <h2>{expArr[infoIndex].company}</h2>
-                    <h3>{expArr[infoIndex].location}</h3>
-                    <h4>{expArr[infoIndex].date}</h4>
-                    <p>{expArr[infoIndex].description}</p>
+                <div className={styles['info-container']}>
+                    <div className={styles.info}>
+                        <h2>{expArr[infoIndex].title}</h2>
+                        <h2>{expArr[infoIndex].company}</h2>
+                        <h3>{expArr[infoIndex].location}</h3>
+                        <h4>{expArr[infoIndex].date}</h4>
+                        <p style={{ whiteSpace: 'pre-line' }}>{expArr[infoIndex].description}</p>
+
+                    </div>
         
                 </div>
             </div>

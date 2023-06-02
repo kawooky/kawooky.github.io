@@ -38,7 +38,7 @@ export const projectsInfoObject = {
     personalWebsite :  {
         image: personalWebsiteImage,
         name: 'Personal Website',
-        description: 'A website created to advertise myself.',
+        description: 'Personal website showing off features such as a responsive navbar, filterable timeline and a contact form.',
         languages: 'TypeScript, React',
         github: 'https://github.com/kawooky/kawooky.github.io',
         website: 'N/A'

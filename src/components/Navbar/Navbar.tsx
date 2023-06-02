@@ -55,7 +55,11 @@ const Navbar: React.FC<Props> = ({ homeRef, aboutRef, experienceRef, projectsRef
           </button>
         </li>
         <li>
-          <button onClick={()=>{window.open('/pdfs/Software-Development-CV.pdf', '_blank', 'noopener')}}>
+          <button className={styles.resume} 
+          // style={{border: '1px solid #000000',
+          // width: '50px',
+          // height: '50px',}} 
+          onClick={()=>{window.open('/pdfs/Software-Development-CV.pdf', '_blank', 'noopener')}}>
             Resume
           </button>
         </li>

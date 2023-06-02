@@ -25,29 +25,29 @@ export const Timeline : React.FC<Props> = ({infoIndex, setInfoIndex}) => {
 
 
     return (
-        <div>
+        <div className={styles.timeline}>
             <div className={styles['button-container']}>
-                <button className={styles['left-button']} style={{backgroundColor: type==='All'? '#ff0000' : 'transparent'}} onClick={() => {
+                <button className={styles['left-button']} style={{backgroundColor: type==='All'? '#4696dd' : 'transparent'}} onClick={() => {
                     setType('All')
                 }}>
                     All
                 </button>
-                <button className={styles.buttons} style={{backgroundColor: type==='Work'? '#ff0000' : 'transparent'}} onClick={() => {
+                <button className={styles.buttons} style={{backgroundColor: type==='Work'? '#4696dd' : 'transparent'}} onClick={() => {
                     setType('Work')
                 }}>
                     Work
                 </button>
-                <button className={styles.buttons} style={{backgroundColor: type==='Education'? '#ff0000' : 'transparent'}} onClick={() => {
+                <button className={styles.buttons} style={{backgroundColor: type==='Education'? '#4696dd' : 'transparent'}} onClick={() => {
                     setType('Education')
                 }}>
                     Education
                 </button>
-                <button className={styles.buttons} style={{backgroundColor: type==='Volunteering'? '#ff0000' : 'transparent'}} onClick={() => {
+                <button className={styles.buttons} style={{backgroundColor: type==='Volunteering'? '#4696dd' : 'transparent'}} onClick={() => {
                     setType('Volunteering')
                 }}>
                     Volunteering
                 </button>
-                <button className={styles['right-button']} style={{backgroundColor: type==='Placements'? '#ff0000' : 'transparent'}} onClick={() => {
+                <button className={styles['right-button']} style={{backgroundColor: type==='Placements'? '#4696dd' : 'transparent'}} onClick={() => {
                     setType('Placements')
                 }}>
                     Placements

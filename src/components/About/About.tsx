@@ -32,7 +32,7 @@ const About: React.FC<Props> = ({ aboutRef }) => {
                         both my technical and soft skills.<br /> <br />
 
                         In the distant future, I wish to be an expert of
-                        my craft and leader working towards making a
+                        my craft and a leader working towards making a
                         positive change.<br /> <br />
 
                         Strengths - drive, teamwork and problem

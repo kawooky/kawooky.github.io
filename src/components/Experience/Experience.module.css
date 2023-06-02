@@ -1,9 +1,10 @@
 .experience {
-    background-color: rgb(44, 213, 75);
+    background-color: rgb(241, 0, 148);
     height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
+    color: #f0f8ff;
 }
 
 
@@ -18,18 +19,19 @@
 
 .experience-body {
     /* white-space: pre-wrap; */
-    height: 90vh;
+    height: 80vh;
+    width: 90vw;
     display: flex;
-    /* align-items: center; */
-    /* justify-content: center; */
+    align-items: center; 
+    justify-content: space-between;
     font-size: 20px;
+    /* background-color: aquamarine; */
 }
 
 .timeline-and-buttons-container {
     background-color: rgb(29, 47, 63);
     border-radius: 30px;
-    width: 40vw;
-    margin: 2vw;
+    width: 45vw;
 }
 
 
@@ -38,10 +40,15 @@
     height: 80vh;
 }
 
-.info {
-    width: 40vw;
-    margin: 2vw;
-    padding: 2vw;
-    background-color: rgb(255, 68, 0);
+.info-container {
+    width: 45vw;
+    height: 80vh;
+
+    /* padding: 2vw; */
+    background-color: #4696dd;
     border-radius: 30px;
+}
+
+.info {
+    padding: 30px
 }

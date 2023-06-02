@@ -1,6 +1,14 @@
-import React from 'react';
+import React , {useState} from 'react';
 import styles from './Contact.module.css'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faShuttleSpace } from '@fortawesome/free-solid-svg-icons'
+import { faPaperPlane } from '@fortawesome/free-solid-svg-icons'
 
+interface ContactMeForm {
+    name: string;
+    email: string;
+    message: string;
+  }
 
 
 interface Props {
@@ -9,7 +17,31 @@ interface Props {
 }
 
 const Contact: React.FC<Props> = ({ homeRef, contactRef }) => {
+    const [formValues, setFormValues] = useState<ContactMeForm>({
+        name: '',
+        email: '',
+        message: '',
+      });
 
+      const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+        const { name, value } = e.target;
+        setFormValues((prevValues) => ({
+          ...prevValues,
+          [name]: value,
+        }));
+      };
+
+      const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+        e.preventDefault();
+        // Perform actions with the form values (e.g., send the data to a server)
+        console.log(formValues);
+        // Reset the form after submission
+        setFormValues({
+          name: '',
+          email: '',
+          message: '',
+        });
+      };
 
 
     return (
@@ -21,25 +53,35 @@ const Contact: React.FC<Props> = ({ homeRef, contactRef }) => {
             <div className={styles['contact-body']}>
 
 
-            <form className={styles.form}>
-                <label>
-                    Name:
-                    <input type='text' name='name' />
+            <form className={styles.form} onSubmit={handleSubmit}>
+                <label className={styles.label}>
+                    <h2>Name:</h2>
+                    <input className={styles.name} type='text' name='name' placeholder="Bill Gates" value={formValues.name} onChange={handleChange}/>
                 </label>
-                <label>
-                    Email Address:
-                    <input type='text' name='email' />
+                <label className={styles.label}>
+                    <h2>Email Address:</h2>
+                    <input className={styles.email} type='text' name='email' placeholder="bill.gates@hiringteam.com" value={formValues.email} onChange={handleChange}/>
                 </label>
-                <label>
-                    Message:
-                    <input type='text' name='message' />
+                <label className={styles['message-label']}>
+                    <h2>Message:</h2>
+                    
+                    <textarea  className={styles.message} 
+                    id="message" name='message' placeholder="We would love for you to work at our company..." value={formValues.message} onChange={handleChange}/>
                 </label>
-                <input type='submit' value='Send Message'></input>
+                
+  
+
+                <button className={styles.send} type='submit'>SEND<FontAwesomeIcon icon={faPaperPlane} size='xs'/></button>
+            
+
+
             </form>
 
-            <button className={styles['top-button']} onClick={() => homeRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' })}>
-                Back to the top
-            </button>
+
+            </div>
+            <div className={styles['top-button-container']}>
+
+                <FontAwesomeIcon className={styles.rocket} icon={faShuttleSpace} size='2xl' rotation={270} onClick={() => homeRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' })}/>
 
             </div>
         </div>
