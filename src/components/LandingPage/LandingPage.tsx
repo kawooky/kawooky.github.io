@@ -25,21 +25,21 @@ const LandingPage: React.FC<Props> = ({ homeRef, aboutRef, experienceRef, projec
     return (
         <div ref={homeRef} className={styles['landing-page']}>
             <Navbar homeRef={homeRef} aboutRef={aboutRef} experienceRef={experienceRef} projectsRef={projectsRef} contactRef={contactRef} />
+            <div className={styles['mobile-body']}>
+                <div className={styles['mobile-text-box']}>
+                                <p>Hello World,</p>
+                                <h1>I'm Youssef Kawook</h1>
+                                <p>A Full Stack Developer currently based in Manchester, UK. </p>
+                </div>
+            </div>
 
             <div className={styles.body}>
                 <div className={styles['links-and-text-container']}>
                     <div className={styles['links-container']}>
                         <div className={styles.links}>
                             <FontAwesomeIcon icon={faInstagram} size='2xl' onClick={() => { window.open('https://www.instagram.com/kawooky/', '_blank') }} />
-                            <FontAwesomeIcon icon={faGithubSquare} size='2xl' onClick={()=>{window.open('https://github.com/kawooky', '_blank')}}/>
-                            <FontAwesomeIcon icon={faLinkedin} size='2xl' onClick={()=>{window.open('https://www.linkedin.com/in/youssef-kawook/', '_blank')}}/>
-                        </div>
-                    </div>
-                    <div className={styles['mobile-text-box']}>
-                        <div>
-                            <h2>Hello World,</h2>
-                            <h1>I'm Youssef Kawook</h1>
-                            <h2>A Full Stack Developer currently based in Manchester, UK. </h2>
+                            <FontAwesomeIcon icon={faGithubSquare} size='2xl' onClick={() => { window.open('https://github.com/kawooky', '_blank') }} />
+                            <FontAwesomeIcon icon={faLinkedin} size='2xl' onClick={() => { window.open('https://www.linkedin.com/in/youssef-kawook/', '_blank') }} />
                         </div>
                     </div>
 

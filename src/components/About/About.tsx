@@ -21,14 +21,13 @@ const About: React.FC<Props> = ({ aboutRef }) => {
                 </div>
                 <div className={styles['about-me']}>
                     <h2>Who am I?</h2>
-                    <p>Hi! In 2021, I graduated from The University of
+                    <p> In 2021, I graduated from The University of
                         Leeds with a first in Mathematics. <br /><br />
 
-                        In February 2023, I completed the Northcoders
+                        February 2023, I completed the Northcoders
                         full-time, 13-week software development bootcamp. <br /> <br />
 
-                        I'm at the start of my professional career. I'm
-                        looking for work that will allow me to develop
+                        I'm at the start of my professional career, looking for work that will allow me to develop
                         both my technical and soft skills.<br /> <br />
 
                         In the distant future, I wish to be an expert of
