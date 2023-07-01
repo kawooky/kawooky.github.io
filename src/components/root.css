@@ -1,0 +1,24 @@
+:root {
+    --one: rgb(0,0,0);
+    --two: rgb(251, 255, 254);
+    --three: rgb(70, 150, 221);
+    --four: rgb(29, 47, 63);
+
+    --font-size-full-header: 30px;
+    /* h1 */
+
+    --font-size-full-subheader: 20px;
+    /* h2 */
+
+    --font-size-full-paragraph: 20px;
+    /* p */
+
+    --font-size-med-header: 30px;
+    --font-size-med-subheader: 20px;
+    --font-size-med-paragraph: 20px;
+
+    --font-size-phone-header: 30px;
+    --font-size-phone-subheader: 20px;
+    --font-size-phone-paragraph: 15px;
+    
+}

@@ -1,4 +1,83 @@
+@import '../root.css';
+
 .experience {
-    background-color: rgb(44, 213, 75);
-    height: 100vh
+    background-color: rgb(0,0,0);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: rgb(251, 255, 254);
+}
+
+
+.experience-header {
+    height: 10vh;
+    font-size: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.experience-body {
+    /* white-space: pre-wrap; */
+    height: 80vh;
+    width: 90vw;
+    display: flex;
+    align-items: center; 
+    justify-content: space-between;
+    font-size: 20px;
+    /* background-color: aquamarine; */
+}
+
+.timeline-and-buttons-container {
+    background-color: rgb(29, 47, 63);
+    /* border-radius: 30px; */
+    width: 45vw;
+}
+
+
+/* .timeline-container {
+    width: 50vw;
+    height: 80vh;
+} */
+
+.info-container {
+    width: 45vw;
+    height: 80vh;
+
+    /* padding: 2vw; */
+    background-color: #4696dd;
+    /* border-radius: 30px; */
+    overflow: auto;
+}
+
+.info {
+    padding: 30px
+}
+
+
+
+@media (max-width: 768px) {
+    .experience {
+        height: auto;
+    }
+    .experience-body {
+        width: 80%;
+        height: auto;
+    }
+    .info-container {
+        display: none;
+    }
+
+    .timeline-and-buttons-container {
+        width: 100%;
+        margin-bottom: 40px;
+    }
+
+    .experience-header{
+        height: 100px;
+    }
+
 }

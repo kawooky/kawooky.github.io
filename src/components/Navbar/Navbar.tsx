@@ -23,35 +23,43 @@ const Navbar: React.FC<Props> = ({ homeRef, aboutRef, experienceRef, projectsRef
       <div className={styles.name}>Youssef Kawook</div>
       <ul className={`${styles.menu} ${showMenu ? styles.active : ''}`}>
         <li>
-        <button onClick={() => {
-          aboutRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' })
-          setShowMenu(!showMenu)}}>
-          About
-        </button>
+          <button onClick={() => {
+            aboutRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+            setShowMenu(!showMenu)
+          }}>
+            About
+          </button>
         </li>
         <li>
           <button onClick={() => {
             experienceRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' })
-            setShowMenu(!showMenu)}}>
+            setShowMenu(!showMenu)
+          }}>
             Experience
           </button>
         </li>
         <li>
-        <button onClick={() => {
+          <button onClick={() => {
             projectsRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' })
-            setShowMenu(!showMenu)}}>
+            setShowMenu(!showMenu)
+          }}>
             Projects
           </button>
         </li>
         <li>
-        <button onClick={() => {
+          <button onClick={() => {
             contactRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' })
-            setShowMenu(!showMenu)}}>
+            setShowMenu(!showMenu)
+          }}>
             Contact
           </button>
         </li>
         <li>
-          <button>
+          <button className={styles.resume} 
+          // style={{border: '1px solid #000000',
+          // width: '50px',
+          // height: '50px',}} 
+          onClick={()=>{window.open('/pdfs/Software-Development-CV.pdf', '_blank', 'noopener')}}>
             Resume
           </button>
         </li>

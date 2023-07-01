@@ -1,28 +1,139 @@
+@import '../root.css';
+
+
 .landing-page {
+
     display: flex;
     justify-content: space-between;
     align-items: center;
     height: 100vh;
     flex-direction: column;
-    background-color: black;
-    color: aliceblue;
+    background-color: var(--three);
+    /* background-color: #4696dd; */
+    color: rgb(251, 255, 254);
 }
+
+.body {
+    
+    /* background-color: rgb(102, 137, 161); */
+    width: 100%;
+    height:100%; 
+    /* z-index: 1; */
+
+}
+
+.links-and-text-container {
+    /* background-color: rgb(152, 94, 24); */
+    display: flex;
+    height: 90%;
+}
+
+.links-container {
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    width: 80px;
+    height: 100%;
+    /* background-color: aquamarine; */
+    /* z-index: 2; */
+}
+
+.links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 230px;
+    gap: 10px;
+    background-color: rgb(0,0,0);
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    font-size: 30px;
+}
+
 .text-box {
-    justify-content: flex-end;
+    height: 100%;
+    width: calc(100% - 160px);
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* background-color: rgb(139, 175, 206); */
 
 }
-
 .text-box h2 {
-    font-size: 40px;
+    font-size: 30px;
 }
 
 .text-box h1 {
     font-size: 80px;
 }
 
+.icon-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height:10%;
+    width: 100%;
+/* background-color: rgb(19, 48, 110); */
+}
 
 .icon {
     height: 30px;
-    margin-bottom: 30px
 }
 
+.mobile-text-box {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .landing-page {
+        height: auto;
+    }
+    .body {
+        width: 100vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: rgb(54, 74, 92);
+    }
+
+    .text-box {
+        display: none;
+    }
+
+    .links-and-text-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: blueviolet;
+        width: 100vw;
+    }
+
+    .mobile-body {
+        display: flex;
+        flex-direction: column;
+        /* align-items: center; */
+        justify-content: center;
+        /* display: flex; */
+        width: 80vw;
+        /* height: 20vh; */
+        /* background-color: antiquewhite; */
+    }
+
+    .mobile-text-box {
+        display: block;
+    }
+
+    .links-container {
+        display: none;
+
+    }
+
+    .icon {
+        display: none;
+    }
+
+
+}
