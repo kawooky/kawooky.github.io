@@ -35,11 +35,19 @@ const LandingPage: React.FC<Props> = ({ homeRef, aboutRef, experienceRef, projec
                             <FontAwesomeIcon icon={faLinkedin} size='2xl' onClick={()=>{window.open('https://www.linkedin.com/in/youssef-kawook/', '_blank')}}/>
                         </div>
                     </div>
+                    <div className={styles['mobile-text-box']}>
+                        <div>
+                            <h2>Hello World,</h2>
+                            <h1>I'm Youssef Kawook</h1>
+                            <h2>A Full Stack Developer currently based in Manchester, UK. </h2>
+                        </div>
+                    </div>
+
                     <div className={styles['text-box']}>
                         <div>
                             <h2>Hello World,</h2>
                             <h1>I'm Youssef Kawook</h1>
-                            <h2>A Full Stack Developer currently based in Leeds, UK. </h2>
+                            <h2>A Full Stack Developer currently based in Manchester, UK. </h2>
 
                         </div>
                     </div>

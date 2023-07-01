@@ -17,11 +17,11 @@ const About: React.FC<Props> = ({ aboutRef }) => {
             </div>
             <div className={styles['about-body']}>
                 <div className={styles.picture}>
-                    <img src={profileImg} alt="profile pic" width='300' height="300" />
+                    <img src={profileImg} alt="profile pic" width="60%" height="auto" />
                 </div>
                 <div className={styles['about-me']}>
                     <h2>Who am I?</h2>
-                    <h3>Hi! In 2021, I graduated from The University of
+                    <p>Hi! In 2021, I graduated from The University of
                         Leeds with a first in Mathematics. <br /><br />
 
                         In February 2023, I completed the Northcoders
@@ -41,11 +41,59 @@ const About: React.FC<Props> = ({ aboutRef }) => {
                         Values - compassion, integrity and development.<br /> <br />
 
                         Some of my hobbies away from the screens are
-                        runnning, tennis, traveling and cooking.</h3>
+                        runnning, tennis, traveling and cooking.</p>
                 </div>
                 <div className={styles.skills}>
-                    <h2>Languages:</h2>
-                    <h3>Javascript<br />
+                    <h2>Skills: </h2>
+                    <div className={styles["skill-box-container"]}>
+                        <div className={styles["skill-box"]}>
+                            <h3>Javascript</h3>
+                        </div>
+                        <div className={styles["skill-box"]}>
+                            <h3>Typescript</h3>
+                        </div>
+                        <div className={styles["skill-box"]}>
+                            <h3>Node.js</h3>
+                        </div>
+                        <div className={styles["skill-box"]}>
+                            <h3>React</h3>
+                        </div>
+                        <div className={styles["skill-box"]}>
+                            <h3>React Native</h3>
+                        </div>
+                        <div className={styles["skill-box"]}>
+                            <h3>HTML</h3>
+                        </div>
+                        <div className={styles["skill-box"]}>
+                            <h3>CSS</h3>
+                        </div>
+                        <div className={styles["skill-box"]}>
+                            <h3>Express</h3>
+                        </div>
+                        <div className={styles["skill-box"]}>
+                            <h3>SQL</h3>
+                        </div>
+                        <div className={styles["skill-box"]}>
+                            <h3>Jest</h3>
+                        </div>
+                        <div className={styles["skill-box"]}>
+                            <h3>Python</h3>
+                        </div>
+                        <div className={styles["skill-box"]}>
+                            <h3>Github</h3>
+                        </div>
+                        <div className={styles["skill-box"]}>
+                            <h3>OOP</h3>
+                        </div>
+                        <div className={styles["skill-box"]}>
+                            <h3>TDD</h3>
+                        </div>
+
+                    </div>
+
+
+
+                    {/* <h3>Javascript<br />
                         Typescript<br />
                         Node<br />
                         React<br />
@@ -56,14 +104,10 @@ const About: React.FC<Props> = ({ aboutRef }) => {
                         SQL<br />
                         Jest<br />
                         Python
-                        </h3>
-
-                        <h2>Other skills:</h2>
-                        <h3>
-                            Github<br />
-                            OOP<br />
-                            TDD<br />
-                        </h3>
+                        Github<br />
+                        OOP<br />
+                        TDD<br />
+                    </h3> */}
                 </div>
             </div>
 

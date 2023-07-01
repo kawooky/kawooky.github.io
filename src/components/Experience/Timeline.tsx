@@ -14,7 +14,7 @@ interface Props {
     setInfoIndex: React.Dispatch<React.SetStateAction<number>>;
 }
 
-export const Timeline : React.FC<Props> = ({infoIndex, setInfoIndex}) => {
+export const Timeline: React.FC<Props> = ({ infoIndex, setInfoIndex }) => {
     const [type, setType] = useState('All');
 
 
@@ -27,27 +27,27 @@ export const Timeline : React.FC<Props> = ({infoIndex, setInfoIndex}) => {
     return (
         <div className={styles.timeline}>
             <div className={styles['button-container']}>
-                <button className={styles['left-button']} style={{backgroundColor: type==='All'? '#4696dd' : 'transparent'}} onClick={() => {
+                <button className={styles['left-button']} style={{ backgroundColor: type === 'All' ? '#4696dd' : 'transparent' }} onClick={() => {
                     setType('All')
                 }}>
                     All
                 </button>
-                <button className={styles.buttons} style={{backgroundColor: type==='Work'? '#4696dd' : 'transparent'}} onClick={() => {
+                <button className={styles.buttons} style={{ backgroundColor: type === 'Work' ? '#4696dd' : 'transparent' }} onClick={() => {
                     setType('Work')
                 }}>
                     Work
                 </button>
-                <button className={styles.buttons} style={{backgroundColor: type==='Education'? '#4696dd' : 'transparent'}} onClick={() => {
+                <button className={styles.buttons} style={{ backgroundColor: type === 'Education' ? '#4696dd' : 'transparent' }} onClick={() => {
                     setType('Education')
                 }}>
                     Education
                 </button>
-                <button className={styles.buttons} style={{backgroundColor: type==='Volunteering'? '#4696dd' : 'transparent'}} onClick={() => {
+                <button className={styles.buttons} style={{ backgroundColor: type === 'Volunteering' ? '#4696dd' : 'transparent' }} onClick={() => {
                     setType('Volunteering')
                 }}>
                     Volunteering
                 </button>
-                <button className={styles['right-button']} style={{backgroundColor: type==='Placements'? '#4696dd' : 'transparent'}} onClick={() => {
+                <button className={styles['right-button']} style={{ backgroundColor: type === 'Placements' ? '#4696dd' : 'transparent' }} onClick={() => {
                     setType('Placements')
                 }}>
                     Placements
@@ -59,19 +59,19 @@ export const Timeline : React.FC<Props> = ({infoIndex, setInfoIndex}) => {
                         if (exp.type === 'Work') {
                             return (
                                 (type === 'All' || type === 'Work') &&
-                                <VerticalTimelineElement 
+                                <VerticalTimelineElement
                                     key={index}
                                     className={styles["vertical-timeline-element--work"]}
                                     position={'right'}
                                     contentStyle={
-                                        { background: 'rgb(33, 150, 243)', color: '#fff' }
+                                        { background: 'rgb(70, 150, 221)', color: '#fff' }
                                     }
                                     date={exp.date}
                                     iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
                                     onTimelineElementClick={() => {
                                         setInfoIndex(index)
                                     }}
-                                icon={<FontAwesomeIcon icon={faBriefcase} />}
+                                    icon={<FontAwesomeIcon icon={faBriefcase} />}
                                 >
                                     <h3 className="vertical-timeline-element-title">{exp.title}, {exp.company}</h3>
                                     <h4 className="vertical-timeline-element-subtitle">{exp.location}</h4>
@@ -79,45 +79,43 @@ export const Timeline : React.FC<Props> = ({infoIndex, setInfoIndex}) => {
                             )
                         }
 
-                            if (exp.type === 'Education') {
-                                return (
-                                    (type === 'All' || type === 'Education') &&
-                                    <VerticalTimelineElement
-                                    key={index}
-                                        className={styles["vertical-timeline-element--work"]}
-                                        position={'right'}
-                                        contentStyle={
-                                            { background: 'rgb(33, 150, 0)', color: '#fff' }
-                                        }
-                                        date={exp.date}
-                                        iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
-                                        onTimelineElementClick={() => {
-                                            setInfoIndex(index)
-                                        }}
-                                    icon={<FontAwesomeIcon icon={faUserGraduate} />}
-                                    >
-                                        <h3 className="vertical-timeline-element-title">{exp.title}, {exp.company}</h3>
-                                        <h4 className="vertical-timeline-element-subtitle">{exp.location}</h4>
-                                    </VerticalTimelineElement>
-                                )
-                            }
-
-                        if (exp.type === 'Volunteering') {
+                        if (exp.type === 'Education') {
                             return (
-                                (type === 'All' || type === 'Volunteering') &&
+                                (type === 'All' || type === 'Education') &&
                                 <VerticalTimelineElement
-                                key={index}
+                                    key={index}
                                     className={styles["vertical-timeline-element--work"]}
                                     position={'right'}
                                     contentStyle={
-                                        { background: 'rgb(0, 0, 243)', color: '#fff' }
-                                    }
+                                        { background: 'rgb(70, 150, 221)', color: '#fff' }}
                                     date={exp.date}
                                     iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
                                     onTimelineElementClick={() => {
                                         setInfoIndex(index)
                                     }}
-                                icon={<FontAwesomeIcon icon={faHandshakeAngle} />}
+                                    icon={<FontAwesomeIcon icon={faUserGraduate} />}
+                                >
+                                    <h3 className="vertical-timeline-element-title">{exp.title}, {exp.company}</h3>
+                                    <h4 className="vertical-timeline-element-subtitle">{exp.location}</h4>
+                                </VerticalTimelineElement>
+                            )
+                        }
+
+                        if (exp.type === 'Volunteering') {
+                            return (
+                                (type === 'All' || type === 'Volunteering') &&
+                                <VerticalTimelineElement
+                                    key={index}
+                                    className={styles["vertical-timeline-element--work"]}
+                                    position={'right'}
+                                    contentStyle={
+                                        { background: 'rgb(70, 150, 221)', color: '#fff' }}
+                                    date={exp.date}
+                                    iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
+                                    onTimelineElementClick={() => {
+                                        setInfoIndex(index)
+                                    }}
+                                    icon={<FontAwesomeIcon icon={faHandshakeAngle} />}
                                 >
                                     <h3 className="vertical-timeline-element-title">{exp.title}, {exp.company}</h3>
                                     <h4 className="vertical-timeline-element-subtitle">{exp.location}</h4>
@@ -129,18 +127,18 @@ export const Timeline : React.FC<Props> = ({infoIndex, setInfoIndex}) => {
                             return (
                                 (type === 'All' || type === 'Placements') &&
                                 <VerticalTimelineElement
-                                key={index}
+                                    key={index}
                                     className={styles["vertical-timeline-element--work"]}
                                     position={'right'}
                                     contentStyle={
-                                        { background: 'rgb(0, 0, 243)', color: '#fff' }
-                                    }
+                                        { background: 'rgb(70, 150, 221)', color: '#fff' }}
                                     date={exp.date}
-                                    iconStyle={{ background: 'rgb(33, 150, 20)', color: '#fff' }}
+                                    iconStyle={
+                                        { background: 'rgb(70, 150, 221)', color: '#fff' }}
                                     onTimelineElementClick={() => {
                                         setInfoIndex(index)
                                     }}
-                                icon={<FontAwesomeIcon icon={faChalkboardUser} />}
+                                    icon={<FontAwesomeIcon icon={faChalkboardUser} />}
                                 >
                                     <h3 className="vertical-timeline-element-title">{exp.title}, {exp.company}</h3>
                                     <h4 className="vertical-timeline-element-subtitle">{exp.location}</h4>
