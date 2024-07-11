@@ -30,12 +30,9 @@
     
   }
 
-  /* .resume {
-    font-size: 50px;
-  } */
-
-
-
+  
+  
+  
   .menu button {
     margin: 10px;
     color: rgb(251, 255, 254);
@@ -43,6 +40,10 @@
     border: none;
     font-size: 25px;
     font-weight: bold;
+  }
+  
+  .resume {
+    background-color: aliceblue;
   }
   
   .item {

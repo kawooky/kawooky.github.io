@@ -10,6 +10,15 @@ interface expElement {
 
 export const expArr: expElement[] = [
     {
+        type: 'Work',
+        title: 'Reconciliations Clerk',
+        company: 'Bank of New York Mellon',
+        location: 'Manchester, UK',
+        date: 'July 2023 – January 2024 .',
+        description: '• Performing daily reconciliations for more than 50 accounts, scrutinizing ledgers for inconsistencies, and ensuring the alignment of transactions. \n • I efficiently manage my time to finalize reconciliations within established deadlines and promptly fulfil any requests from the “Line of Business”. \n• Daily use of the Transaction Lifecycle Management tool TLM to reconcile Cash accounts.'
+    }
+    ,
+    {
         type: 'Education',
         title: 'Software Development Bootcamp',
         company: 'Northcoders',

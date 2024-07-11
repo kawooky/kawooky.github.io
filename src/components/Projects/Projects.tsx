@@ -18,7 +18,6 @@ const Projects: React.FC<Props> = ({ projectsRef }) => {
 
     const [viewNumber, setViewNumber] = useState(0)
     const [viewMore, setViewMore] = useState(false)
-    const numbers = [1,2,3]
 
 
     return (
@@ -43,12 +42,12 @@ const Projects: React.FC<Props> = ({ projectsRef }) => {
                 )}
 
                 <>
-                    {viewMore === true && projectsInfoObject.map((project) => <SingleProject projectsInfoObject={project}/>
+                    {viewMore === true && projectsInfoObject.map((project) => <SingleProject projectsInfoObject={project} />
                     )}
                 </>
 
                 <div className={styles.right}>
-                    {viewNumber !== 1 &&
+                    {viewNumber !== projectsInfoObject.length - 3 &&
                         <FontAwesomeIcon icon={faHandPointRight} size={'xl'} onClick={() => { setViewNumber(viewNumber + 1) }} />
                     }
                 </div>

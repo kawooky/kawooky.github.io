@@ -56,17 +56,17 @@ const Contact: React.FC<Props> = ({ homeRef, contactRef }) => {
             <form className={styles.form} onSubmit={handleSubmit}>
                 <label className={styles.label}>
                     <h2>Name:</h2>
-                    <input className={styles.name} type='text' name='name' placeholder="Bill Gates" value={formValues.name} onChange={handleChange}/>
+                    <input className={styles.name} type='text' name='name' placeholder="Will Jackson" value={formValues.name} onChange={handleChange}/>
                 </label>
                 <label className={styles.label}>
                     <h2>Email Address:</h2>
-                    <input className={styles.email} type='text' name='email' placeholder="bill.gates@hiringteam.com" value={formValues.email} onChange={handleChange}/>
+                    <input className={styles.email} type='text' name='email' placeholder="example@example.com" value={formValues.email} onChange={handleChange}/>
                 </label>
                 <label className={styles['message-label']}>
                     <h2>Message:</h2>
                     
                     <textarea  className={styles.message} 
-                    id="message" name='message' placeholder="We would love for you to work at our company..." value={formValues.message} onChange={handleChange}/>
+                    id="message" name='message' placeholder="Your message..." value={formValues.message} onChange={handleChange}/>
                 </label>
                 
   
