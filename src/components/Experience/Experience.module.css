@@ -77,7 +77,8 @@
     }
 
     .experience-header{
-        height: 100px;
+        /* height: 100px; */
+        font-size: var(--header-smaller);
     }
 
 }

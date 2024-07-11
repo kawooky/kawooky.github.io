@@ -201,12 +201,13 @@ overflow: auto;
     }
 
     .send {
-        font-size: 55px;
+        font-size: 40px;
+        letter-spacing: -4px;
     }
 
     .contact-header {
-        height: 100px;
+        height: auto;
+        font-size: var(--header-smaller);
     }
 
-    
 }
